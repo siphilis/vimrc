@@ -1,13 +1,10 @@
 "---------------------- Vimrc file from Siphillis ----------------------------
 
-"-------------------------- janvier 2017 -------------------------------------
+"-------------------------- Fevrier 2017 -------------------------------------
 
 " The following is for pathogen package manager
-
 execute pathogen#infect()
 filetype plugin indent on
-
-" Show statusbar
 
 " Adviced conf from vim for humans
 
