@@ -8,19 +8,26 @@ execute pathogen#infect()
 filetype plugin indent on
 
 " Show statusbar
-set laststatus=2
 
 " Adviced conf from vim for humans
 
-"---------- Affichage
-set title		" Met a jour le titre du terminal
-set number		" Affiche le numero de ligne
-set ruler		" Affiche la position actuelle du curseur
-set wrap		" Affiche les lignes trop longues sur plusieur lignes
-set scrolloff=3		" Affiche un minimum de 3 lignes autour du curseur
+"----------------------------- AFFICHAGE -------------------------------------
 syntax enable		" Active la coloration syntaxique
+"set mouse=a			" Permet d'utiliser la souris
+set title			" Met a jour le titre du terminal
+set number			" Affiche le numero de ligne
+set ruler			" Affiche la position actuelle du curseur
+set wrap			" Affiche les lignes trop longues sur plusieur lignes
+set scrolloff=3		" Affiche un minimum de 3 lignes autour du curseur
+set tabstop=4		" Regle l'affichage des tabulations sur 4 espaces
+colo solarized		" Utilise le theme solarized
+set background=dark	" Utilise des couleurs adaptees pour fond noir	
+set laststatus=2	" Affiche la bar de status
+set colorcolumn=80	" Change la couleur de fond a 80 colonnes
+set showcmd			" Affiche les commandes incompletes
 
-"---------- Recherche
+"----------------------------- RECHERCHE ------------------------------------
+
 set ignorecase		" Ignore la casse lors d'une recherche
 set smartcase		" Sauf si la recherche contient une majuscule
 set incsearch		" Surligne le resultat pendant la saisie
@@ -32,22 +39,6 @@ set noerrorbells	" Empeche vim de beeper
 
 " Cache les fichiers lors de l'ouverture d'un autre
 set hidden
-
-" Active les comportements specifiques au types de fichiers comme
-" la syntaxe et l'indentation
-filetype on
-filetype plugin on
-filetype indent on
-
-" Change la couleur de fond a 80 colonnes
-set colorcolumn=80
-
-" Utilise le theme solarized
-set background=dark
-colorscheme solarized
-
-" Affiche les commandes incompletes
-set showcmd
 
 " Desactive les touches directionnelles
 map <up> <nop>
@@ -85,6 +76,3 @@ endfunc
 
 " Raccourci clavier pour utiliser la fontion
 nnoremap <C-l> :call IndentToggle() <cr>
-
-" Regle l'affichage des tabulations sur 4 espaces
-set tabstop=4
