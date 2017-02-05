@@ -85,3 +85,6 @@ endfunc
 
 " Raccourci clavier pour utiliser la fontion
 nnoremap <C-l> :call IndentToggle() <cr>
+
+" Regle l'affichage des tabulations sur 4 espaces
+set tabstop=4
