@@ -51,8 +51,6 @@ imap <down> <nop>
 imap <left> <nop>
 imap <right> <nop>
 
-" Active la correction automatique
-:setlocal spell 
 
 " Fonction pour passer la numérotation en mode relative "
 function! NumberToggle()
@@ -77,3 +75,22 @@ endfunc
 
 " Raccourci clavier pour utiliser la fontion
 nnoremap <C-l> :call IndentToggle() <cr>
+
+" Regle l'affichage des tabulations sur 4 espaces
+set tabstop=4
+" from 90% without plugins
+set path+=**
+set wildmenu
+
+" Raccourci pour creer les tags dans un fichier
+command! MakeTags !ctags -R .
+
+" Faire de netrw quelquechose de classe
+let g:netrw_banner=0		" disable annoying banner
+let g:netrw_browse_split=4	" open in prior window
+let g:netrw_altv=1			" open splits to the right
+let g:netrw_liststyle=3		" tree view
+"let g:netrw_list_hide=netrw_gitignore#Hide()
+"let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
+let g:netrw_winsize=15
+let g:netrw_localrmdir='rm -r -i'
