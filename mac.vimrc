@@ -1,14 +1,13 @@
-"---------------------- Vimrc file from Siphillis ----------------------------
+"------------------------- Vimrc file from Siphillis ------------------------- 
 
-"-------------------------- Fevrier 2017 -------------------------------------
+"------------------------------ Fevrier 2017 ---------------------------------
 
 " The following is for pathogen package manager
 execute pathogen#infect()
 filetype plugin indent on
 
-" Adviced conf from vim for humans
+"-------------------------------- AFFICHAGE ---------------------------------- 
 
-"----------------------------- AFFICHAGE -------------------------------------
 syntax enable		" Active la coloration syntaxique
 "set mouse=a			" Permet d'utiliser la souris
 set title			" Met a jour le titre du terminal
@@ -23,14 +22,15 @@ set laststatus=2	" Affiche la bar de status
 set colorcolumn=80	" Change la couleur de fond a 80 colonnes
 set showcmd			" Affiche les commandes incompletes
 
-"----------------------------- RECHERCHE ------------------------------------
+"-------------------------------- RECHERCHE ----------------------------------
 
 set ignorecase		" Ignore la casse lors d'une recherche
 set smartcase		" Sauf si la recherche contient une majuscule
 set incsearch		" Surligne le resultat pendant la saisie
 set hlsearch		" Surligne le resultat de la recherche
 
-"---------- Beep
+"---------------------------------- Beep -------------------------------------
+
 set visualbell		" Empeche vim de beeper
 set noerrorbells	" Empeche vim de beeper
 
@@ -80,6 +80,8 @@ set wildmenu
 
 " Raccourci pour creer les tags dans un fichier
 command! MakeTags !ctags -R .
+
+"---------------------------------- NETRW ------------------------------------ 
 
 " Faire de netrw quelquechose de classe
 let g:netrw_banner=0		" disable annoying banner
