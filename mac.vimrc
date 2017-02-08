@@ -50,6 +50,8 @@ imap <right> <nop>
 " Active la correction automatique
 :setlocal spell 
 
+"------------------------------- FUNCTIONS ----------------------------------- 
+
 " Fonction pour passer la numérotation en mode relative "
 function! NumberToggle()
 	if(&relativenumber == 1)
